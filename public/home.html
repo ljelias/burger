@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+    header {
+        width: 80%;
+        margin: 10px auto;
+        padding: 0px 10px 15px 10px;
+        color: firebrick;
+        text-align: center;
+        border: 6px solid burlywood;
+        border-radius: 36px;
+    }
+    .headercontainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .star, .burg {
+        max-width: 120px;
+        margin: 4px 4px;
+    }
+
+    #container {
+        width: 80%;
+        margin: 10px auto;
+        padding: 15px 0;
+        color: firebrick;
+        text-align: center;
+        border: 6px solid burlywood;
+        border-radius: 36px;
+    }
+    </style>
+</head>
+<body>
+    <header class="w3-card-4">
+        <h1>Hamburger Haven</h1>
+        <div class="headercontainer">
+            <img src="assets/star.jpg" alt="click star" class="star" id="star1" star-id="#burg1" id="star1">
+            <img src="assets/Krabby_Patty_2.jpg" alt="white castle" style='display:none' class="burg" id="burg1" burg-id="#star1">
+            <img src="assets/star.jpg" alt="click star" class="star" star-id="#burg2" id="star2">
+            <img src="assets/hamburglar.png" alt="hamburglar" style='display:none' class="burg" id="burg2" burg-id="#star2">
+            <img src="assets/star.jpg" alt="click star" class="star" star-id="#burg3" id="star3">
+            <img src="assets/king-burger.jpg" alt="king burger" style='display:none' class="burg" id="burg3" burg-id="#star3">
+            <img src="assets/star.jpg" alt="click star" class="star" star-id="#burg4" id="star4">
+            <img src="assets/White-Castle.jpg" alt="krabby patty" style='display:none' class="burg" id="burg4" burg-id="#star4">
+            <img src="assets/star.jpg" alt="click star" class="star" star-id="#burg5" id="star5">
+            <img src="assets/mayor1.jpg" alt="mayor mc-cheese" style='display:none' class="burg" id="burg5" burg-id="#star5">
+            <img src="assets/star.jpg" alt="click star" class="star" star-id="#burg6" id="star6">
+            <img src="assets/wimpy_popeye.jpg" alt="wimpy" style='display:none' class="burg" id="burg6" burg-id="#star6">
+            <img src="assets/star.jpg" alt="click star" class="star" star-id="#burg7" id="star7">
+            <img src="assets/durr-burger.jpg" alt="durr burger" style='display:none' class="burg" id="burg7" burg-id="#star7">
+
+
+        </div>
+
+    </header>
+    <div id="container">
+
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.star').on('click', function() {
+                var burgId = $(this).attr('star-id');
+                $(this).hide();
+                $(burgId).fadeIn(1000);
+            });
+
+            $('.burg').on('click', function() {
+                var starId = $(this).attr('burg-id');
+                $(this).hide();
+                $(starId).fadeIn(1000);
+            });
+        })
+    </script>
+</body>
+</html>

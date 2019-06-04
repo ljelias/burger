@@ -1,0 +1,48 @@
+header {
+    width: 80%;
+    margin: 10px auto;
+    padding: 0px 10px 15px 10px;
+    color: firebrick;
+    text-align: center;
+    border: 6px solid burlywood;
+    border-radius: 36px;
+}
+.headercontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+.star, .burg {
+    max-width: 120px;
+    margin: 4px 4px;
+}
+
+#container {
+    width: 80%;
+    margin: 10px auto;
+    padding: 15px 0;
+    color: firebrick;
+    text-align: center;
+    border: 6px solid burlywood;
+    border-radius: 36px;
+}
+
+
+li {
+    padding: 5px;
+    margin: 5px;
+    width: 60%;
+    background: lightgoldenrodyellow;
+  }
+
+  .create-update-form {
+    padding: 5px;
+    margin: 5px;
+    background: beige;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+  
