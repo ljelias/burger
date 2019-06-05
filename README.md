@@ -11,4 +11,4 @@ The npm packages needed to run this app are: express / express-handlebars / mysq
 
 ### A screenshot of Burger Haven
 
-![burger haven display](public/BurgerHavenCapture.png)
+![burger haven display](BurgerHavenCapture.png)
