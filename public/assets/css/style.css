@@ -1,7 +1,7 @@
 header {
     width: 80%;
     margin: 10px auto;
-    padding: 0px 10px 15px 10px;
+    padding: 0px 6px 10px 6px;
     color: firebrick;
     text-align: center;
     border: 6px solid burlywood;
@@ -13,36 +13,70 @@ header {
     justify-content: center;
     align-items: flex-end;
 }
+
+#hey {
+    font-size: .75em;
+    margin: -1px;
+}
+
+h2, h3 {
+    margin: 3px 6px;
+}
+
 .star, .burg {
-    max-width: 120px;
+    max-width: 90px;
     margin: 4px 4px;
 }
 
 #container {
     width: 80%;
-    margin: 10px auto;
-    padding: 15px 0;
+    margin: 10px auto 40px auto;
+    padding: 5px 0 10px 0;
     color: firebrick;
     text-align: center;
     border: 6px solid burlywood;
     border-radius: 36px;
 }
 
+#container2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container3, .create-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.burgerroster {
+    width: 48%;
+    margin: 2px;
+}
+
+ul {
+    list-style-type: none;
+  }
 
 li {
-    padding: 5px;
-    margin: 5px;
-    width: 60%;
-    background: lightgoldenrodyellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1.2em;
+    padding: 4px 12px;
+    margin: 3px auto;
+    width: 98%;
+    background: rgba(248, 236, 109, 0.6);
   }
 
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: beige;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
+.change-taken, .delete-burger {
+    font-size: .6em;
+}
+
+  .create-form {
+    padding: 9px;
+    margin: 3px 9px;
+    background: rgba(250, 253, 57, 0.3);
   }
   

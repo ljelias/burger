@@ -1,10 +1,8 @@
-// Import MySQL connection.
 var connection = require("../config/connection.js");
 
 // Helper function for SQL syntax.
-// to pass 3 values into the mySQL query we need 3 question marks.
-//the function loops through and creates an array of question marks
-//- ["?", "?", "?"] - and turns it into a string.
+// to pass 3 values into the mySQL query needs 3 question marks.
+//the function creates an array of question marks and turns it into a string.
 // ["?", "?", "?"].toString() => "?,?,?";
 function printQuestionMarks(num) {
   var arr = [];
@@ -22,12 +20,11 @@ function objToSql(ob) {
     var value = ob[key];
     // check to skip hidden properties
     if (Object.hasOwnProperty.call(ob, key)) {
-      // if string with spaces, add quotations 
+      // add quotations to strings with spaces 
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
       }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
+      // e.g. {name: 'John Doe'} => ["name='John Doe'"] or {sleepy: true} => ["sleepy=true"]
       arr.push(key + "=" + value);
     }
   }
@@ -36,7 +33,7 @@ function objToSql(ob) {
   return arr.toString();
 }
 
-// Object for all our SQL statement functions.
+// Object for SQL statement functions
 var orm = {
   all: function(tableInput, callback) {
     var queryString = "SELECT * FROM " + tableInput + ";";

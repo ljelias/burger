@@ -1,32 +1,37 @@
-<h1>Great Burgers!</h1>
+<h2>Claim Your Burger!</h2>
 
-<h2>Burgers that are available!</h2>
-
+<div id="container2">
+<div  class="burgerroster">
+<h3>Available burgers:</h3>
 <ul>
   {{#each burgers}}
     {{#unless claimed}}
-      {{> burgers/burger-block taken=false}}
+      {{> burger-block taken=true}}
     {{/unless}}
   {{/each}}
 </ul>
+</div>
 
-<h2>Burgers that are taken!</h2>
-
+<div class="burgerroster">
+<h3>Already taken:</h3>
 <ul>
   {{#each burgers}}
     {{#if claimed}}
-      {{> burgers/burger-block taken=true}}
+      {{> burger-block taken=false}}
     {{/if}}
   {{/each}}
 </ul>
+</div>
+</div>
 
-<h2>Add burger names!</h2>
-<form class="create-form">
-
+<div id="container3">
+<h3>Post new burgers>>></h3>
+<form class="create-form" >
   <div class="form-group">
-    <label for="burgerup">Next burger up:</label>
-    <input type="text" id="burgerup" name="name">
+    <label for="burgerup">Enter burger name:</label>
+    <input type="text" id="burgerup" name="name" style="height:30px;">
   </div>
 
-  <button type="submit">Add next burger</button>
+  <button type="submit" style="height:30px;">Add burger</button>
 </form>
+</div>
